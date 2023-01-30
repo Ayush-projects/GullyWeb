@@ -1493,7 +1493,22 @@ function getMatchedCities(input) {
 const handleClick = () => {
 	if (document.getElementById("city").value != "") {
 		document.getElementById("select").innerHTML = `
- <div class="" style="width: 100%; height: 4rem; background-color: white;">
+ <div class="my-2" style="width: 100%; height: 8rem; background-color: white;">
+  <div class="d-flex flex-row mx-3" style="height: 3rem">
+ <i class="bi bi-search text-dark px-2"></i>
+ <p class="text-secondary fw-bold px-1">Kolkata,</p>
+ <p class="text-secondary fw-bold px-1">West Bengal</p>
+ </div>
+  <div class="d-flex flex-row mx-3" style="height: 3rem">
+ <i class="bi bi-search text-dark px-2"></i>
+ <p class="text-secondary fw-bold px-1">Kolkata,</p>
+ <p class="text-secondary fw-bold px-1">West Bengal</p>
+ </div>
+  <div class="d-flex flex-row mx-3" style="height: 3rem">
+ <i class="bi bi-search text-dark px-2"></i>
+ <p class="text-secondary fw-bold px-1">Kolkata,</p>
+ <p class="text-secondary fw-bold px-1">West Bengal</p>
+ </div>
   </div>`
 	}
 	else {
