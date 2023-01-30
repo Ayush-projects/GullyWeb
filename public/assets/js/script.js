@@ -1489,3 +1489,17 @@ function getMatchedCities(input) {
 }
 
 
+
+const handleClick = () => {
+  if(document.getElementById("city").value != ""){
+  document.getElementById("select").innerHTML = `
+ <div class="" style="width: 100%; height: 4rem; background-color: white;">
+  </div>`
+  }
+  else
+  {
+	document.getElementById("select").innerHTML = ""
+  }
+};
+
+
