@@ -99,7 +99,7 @@
           <form action="#" class="form-search d-flex align-items-stretch" style="height: 5rem; border-radius: 0px;"
             data-aos="fade-up" data-aos-delay="200">
             <i class="bi bi-geo-alt text-dark" style="margin-top: 18px;"></i>
-            <input onclick="handleClick()" id="city" type="text" class="form-control px-2"
+            <input oninput="handleClick()" id="city" type="text" class="form-control px-2"
               placeholder="Enter city name">
             <button type="submit" class="btn btn-primary">Search</button>
           </form>
@@ -129,7 +129,7 @@
               <div class="stats-item text-center w-100 h-100">
                 <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
                   class="purecounter"></span>
-                <p>Support</p>
+                <p>People</p>
               </div>
             </div><!-- End Stats Item -->
 
@@ -137,7 +137,7 @@
               <div class="stats-item text-center w-100 h-100">
                 <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
                   class="purecounter"></span>
-                <p>Parters</p>
+                <p>Partners</p>
               </div>
             </div><!-- End Stats Item -->
 
@@ -152,13 +152,6 @@
     </div>
   </section><!-- End Hero Section -->
 
-  <script>
-    const handleClick = () => {
-      document.getElementById("select").innerHTML = `
-     <div class="" style="width: 100%; height: 4rem; background-color: white;">
-      </div>`
-    };
-  </script>
 
   <main id="main">
 
