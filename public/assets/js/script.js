@@ -1493,6 +1493,18 @@ function setCity(city, state) {
 	window.location.href = "/services"
 }
 
+function setEnter() {
+	// x.style.borderRadius = "15px 15px 15px 15px";
+	// x.style.boxShadow = "1px 1px 15px #7B8FA1";
+	document.getElementsByClassName("para").style.color = "#0D42FF";
+}
+
+function setOut() {
+	// x.style.borderRadius = "0px 0px 0px 0px";
+	// x.style.boxShadow = "none";
+	document.getElementsByClassName("para").style.color = "#6C757D";
+
+}
 
 const handleClick = () => {
 	let cityName = document.getElementById("city").value;
@@ -1506,10 +1518,10 @@ const handleClick = () => {
 
 		document.getElementById("select").innerHTML = ""
 		for (let i = 0; i < cities.length; i++) {
-			document.getElementById("select").innerHTML += `  <div class="d-flex flex-row mx-3 mt-2" style="height: 3rem" onclick="setCity('${cities[i].city}', '${cities[i].state}')">
+			document.getElementById("select").innerHTML += `  <div class="d-flex flex-row mx-3 mt-2" style="height: 3rem; cursor: pointer;" onclick="setCity('${cities[i].city}', '${cities[i].state}')" onmouseenter="setEnter(this)" onmouseout="setOut(this)">
 	<i class="bi bi-search text-dark px-2" ></i>
-	<p class="text-secondary fw-bold px-1">${cities[i].city},</p>
-	<p class="text-secondary fw-bold px-1">${cities[i].state}</p>
+	<p class="text-secondary para fw-bold px-1">${cities[i].city},</p>
+	<p class="text-secondary para fw-bold px-1">${cities[i].state}</p>
 	</div>`
 		}
 
