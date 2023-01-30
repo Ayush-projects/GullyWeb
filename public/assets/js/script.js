@@ -1493,41 +1493,44 @@ function getMatchedCities(input) {
 const handleClick = () => {
 	let cityName = document.getElementById("city").value;
 	document.getElementById("select").innerHTML = ""
-	if ( cityName != "") {
-
-            
-
-   let cities = getMatchedCities(cityName)
-   console.log(cities)
+	if (cityName != "") {
 
 
+
+		let cities = getMatchedCities(cityName)
+		console.log(cities)
 
 
 
 
 
 
-//   for(let i=0; i<cities.length; i++)
-//   {
-// 	document.getElementById("select").innerHTML += ``
-//   }
 
+
+		//   for(let i=0; i<cities.length; i++)
+		//   {
+		// 	document.getElementById("select").innerHTML += ``
+		//   }
+		document.getElementById("select").style.background = "white";
+		document.getElementById("select").style.height = "9rem";
 
 		document.getElementById("select").innerHTML = `
- <div class="my-2" style="width: 100%; height: 8rem; background-color: white;">
-  <div class="d-flex flex-row mx-3" style="height: 3rem">
+
+  <div class="d-flex flex-row mx-3 mt-2" style="height: 3rem">
  <i class="bi bi-search text-dark px-2"></i>
  <p class="text-secondary fw-bold px-1">Kolkata,</p>
  <p class="text-secondary fw-bold px-1">West Bengal</p>
  </div>
-  </div>
-  <div class="my-2" style="width: 100%; height: 8rem; background-color: white;">
-  <div class="d-flex flex-row mx-3" style="height: 3rem">
+<div class="d-flex flex-row mx-3" style="height: 3rem">
+ <i class="bi bi-search text-dark px-2"></i>
+ <p class="text-secondary fw-bold px-1">Kolkata,</p>
+ <p class="text-secondary fw-bold px-1">West Bengal</p>
+ </div><div class="d-flex flex-row mx-3" style="height: 3rem">
  <i class="bi bi-search text-dark px-2"></i>
  <p class="text-secondary fw-bold px-1">Kolkata,</p>
  <p class="text-secondary fw-bold px-1">West Bengal</p>
  </div>
-  </div>
+
   `
 	}
 	else {
