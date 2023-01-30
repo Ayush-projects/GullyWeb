@@ -1488,53 +1488,38 @@ function getMatchedCities(input) {
 	return matchingCities.slice(0, 3);
 }
 
+function setCity(city, state)
+{
+	localStorage.setItem("city", JSON.stringify({city, state}))
+	window.location.href = "/services"
+}
 
 
 const handleClick = () => {
 	let cityName = document.getElementById("city").value;
-	document.getElementById("select").innerHTML = ""
+	document.getElementById("select").style.display = "block"
 	if (cityName != "") {
-
-
-
 		let cities = getMatchedCities(cityName)
-		console.log(cities)
-
-
-
-
-
-
-
-
-		//   for(let i=0; i<cities.length; i++)
-		//   {
-		// 	document.getElementById("select").innerHTML += ``
-		//   }
 		document.getElementById("select").style.background = "white";
 		document.getElementById("select").style.height = "9rem";
 
-		document.getElementById("select").innerHTML = `
 
-  <div class="d-flex flex-row mx-3 mt-2" style="height: 3rem">
- <i class="bi bi-search text-dark px-2"></i>
- <p class="text-secondary fw-bold px-1">Kolkata,</p>
- <p class="text-secondary fw-bold px-1">West Bengal</p>
- </div>
-<div class="d-flex flex-row mx-3" style="height: 3rem">
- <i class="bi bi-search text-dark px-2"></i>
- <p class="text-secondary fw-bold px-1">Kolkata,</p>
- <p class="text-secondary fw-bold px-1">West Bengal</p>
- </div><div class="d-flex flex-row mx-3" style="height: 3rem">
- <i class="bi bi-search text-dark px-2"></i>
- <p class="text-secondary fw-bold px-1">Kolkata,</p>
- <p class="text-secondary fw-bold px-1">West Bengal</p>
- </div>
 
-  `
+		document.getElementById("select").innerHTML = ""
+   for(let i=0; i<cities.length; i++)
+   {
+	document.getElementById("select").innerHTML += `  <div class="d-flex flex-row mx-3 mt-2" style="height: 3rem" onclick="setCity('${cities[i].city}', '${cities[i].state}')">
+	<i class="bi bi-search text-dark px-2" ></i>
+	<p class="text-secondary fw-bold px-1">${cities[i].city},</p>
+	<p class="text-secondary fw-bold px-1">${cities[i].state}</p>
+	</div>`
+   }
+
+		
+
 	}
 	else {
-		document.getElementById("select").innerHTML = ""
+		document.getElementById("select").style.display = "none"
 	}
 };
 
