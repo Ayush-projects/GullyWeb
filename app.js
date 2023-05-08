@@ -9,19 +9,17 @@ app.use(express.json())
 
 
 
-app.use("/assets" , express.static("public/assets"))
+app.use("/assets", express.static("public/assets"))
 app.use("/", Main)
 
 
 
 
-app.listen(PORT, (err)=>{
-    if(err)
-    {
+app.listen(PORT, (err) => {
+    if (err) {
         console.log(err)
     }
-    else
-    {
+    else {
         console.log("Server is running on port:", PORT)
     }
 })
