@@ -15,6 +15,8 @@ app.use("/", Main)
 
 
 a()
+const b = 20
+b = 30
 
 app.listen(PORT, (err) => {
     if (err) {
