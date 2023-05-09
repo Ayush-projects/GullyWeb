@@ -14,6 +14,7 @@ app.use("/", Main)
 
 
 
+a()
 
 app.listen(PORT, (err) => {
     if (err) {
