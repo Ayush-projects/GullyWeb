@@ -12,12 +12,6 @@ app.use(express.json())
 app.use("/assets", express.static("public/assets"))
 app.use("/", Main)
 
-
-
-a()
-const b = 20
-b = 30
-
 app.listen(PORT, (err) => {
     if (err) {
         console.log(err)
