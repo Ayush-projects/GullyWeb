@@ -7,6 +7,8 @@ const Main = require('./Routes/Main.js')
 app.set("view engine", "ejs")
 app.use(express.json())
 
+const b = "Ayush"
+b = 20
 
 
 app.use("/assets", express.static("public/assets"))
