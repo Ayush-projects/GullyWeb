@@ -8,7 +8,7 @@ app.set("view engine", "ejs")
 app.use(express.json())
 
 const b = "Ayush"
-b = 20
+b = 10
 
 
 app.use("/assets", express.static("public/assets"))
